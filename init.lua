@@ -31,7 +31,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- colorscheme plugin
-vim.cmd[[colorscheme tokyonight-night]]
+--vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme gruvbox-material]]
 
 
 ------------------------------------------------------------------------
