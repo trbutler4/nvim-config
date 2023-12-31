@@ -45,6 +45,9 @@ lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.rust_analyzer.setup{}
 
+-- NOTE: this is deprecated(?) in favor of vscode-cairo
+--lspconfig.cairo_ls.setup{}
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
