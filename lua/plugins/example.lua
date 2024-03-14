@@ -1,6 +1,6 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
--- if true then return {} end
+if true then return {} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
@@ -12,17 +12,11 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
-  -- add gruvbox material also bc gruvbox is sick
-  { "sainnhe/gruvbox-material"},
-
-  -- add tokyknight 
-  { "folke/tokyonight.nvim" },
-
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox",
     },
   },
 
@@ -160,8 +154,6 @@ return {
         "typescript",
         "vim",
         "yaml",
-        "astro",
-        "rust",
       },
     },
   },
@@ -215,7 +207,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "prettier"
+        "prettier",
       },
     },
   },
