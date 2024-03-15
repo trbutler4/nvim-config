@@ -18,11 +18,14 @@ return {
   -- add tokyknight 
   { "folke/tokyonight.nvim" },
 
+  -- add everforest 
+  { "neanias/everforest-nvim"},
+
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "everforest",
     },
   },
 
