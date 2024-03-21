@@ -9,6 +9,7 @@ return {
         "shfmt",
         "flake8",
         "prettier",
+        "solidity",
       },
     },
   },
