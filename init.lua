@@ -9,7 +9,10 @@ vim.cmd[[
 ]]
 
 -- line numbers
-vim.cmd[[set number]]
+vim.cmd[[
+    set number 
+    set relativenumber
+]]
 
 -- set leader to space 
 vim.g.mapleader = "<Space>"
