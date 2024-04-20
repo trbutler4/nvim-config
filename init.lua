@@ -11,6 +11,8 @@ vim.cmd[[
 -- line numbers
 vim.cmd[[set number]]
 
+-- set leader to space 
+vim.g.mapleader = "<Space>"
 
 ------------------------------------------------------------------------
 -------------------- SETUP LAZY PLUGIN MANAGER -------------------------
