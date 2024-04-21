@@ -17,6 +17,11 @@ vim.cmd[[
 -- set leader to space 
 vim.g.mapleader = "<Space>"
 
+-- yank to system clipboard
+vim.cmd[[
+    set clipboard+=unnamedplus
+]]
+
 ------------------------------------------------------------------------
 -------------------- SETUP LAZY PLUGIN MANAGER -------------------------
 ------------------------------------------------------------------------
