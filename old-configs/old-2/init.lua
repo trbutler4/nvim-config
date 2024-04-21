@@ -9,8 +9,13 @@ vim.cmd[[
 ]]
 
 -- line numbers
-vim.cmd[[set number]]
+vim.cmd[[
+    set number 
+    set relativenumber
+]]
 
+-- set leader to space 
+vim.g.mapleader = "<Space>"
 
 ------------------------------------------------------------------------
 -------------------- SETUP LAZY PLUGIN MANAGER -------------------------
@@ -31,8 +36,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- colorscheme plugin
---vim.cmd[[colorscheme tokyonight-night]]
-vim.cmd[[colorscheme gruvbox-material]]
+vim.cmd[[colorscheme tokyonight-storm]]
 
 
 ------------------------------------------------------------------------
