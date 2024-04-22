@@ -14,8 +14,9 @@ vim.cmd[[
     set relativenumber
 ]]
 
--- set leader to space 
+-- set leader to space (THIS ISNT WORKING???)
 vim.g.mapleader = "<Space>"
+
 
 -- yank to system clipboard
 vim.cmd[[
@@ -26,7 +27,6 @@ vim.cmd[[
 vim.cmd[[
     set mouse=a
 ]]
-
 
 
 ------------------------------------------------------------------------
@@ -48,7 +48,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- colorscheme plugin
-vim.cmd[[colorscheme tokyonight-storm]]
+vim.cmd[[colorscheme everforest]]
+
 
 
 ------------------------------------------------------------------------
