@@ -1,16 +1,11 @@
 return {
-    {
-        "neovim/nvim-lspconfig"
-    },
-    {
-        "nvim-treesitter/nvim-treesitter"
-    },
-    {
-        "ms-jpq/coq_nvim",
-        opts = {
-            lazy = false
-        }
-    },
+    "neovim/nvim-lspconfig",
+    "nvim-treesitter/nvim-treesitter",
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
