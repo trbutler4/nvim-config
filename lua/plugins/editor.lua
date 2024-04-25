@@ -6,7 +6,10 @@ return {
         "nvim-treesitter/nvim-treesitter"
     },
     {
-        "ms-jpq/coq_nvim"
+        "ms-jpq/coq_nvim",
+        opts = {
+            lazy = false
+        }
     },
     {
         'windwp/nvim-autopairs',

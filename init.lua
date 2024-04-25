@@ -56,11 +56,20 @@ vim.cmd[[colorscheme everforest]]
 -------------------- LSP STUFF -----------------------------------------
 ------------------------------------------------------------------------
 -- lsp setup 
+local lsp = require('lspconfig')
+local coq = require("coq")
+
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
-lspconfig.rust_analyzer.setup{}
+lsp.pyright.setup({})
+lsp.tsserver.setup({})
+lsp.rust_analyzer.setup({})
+
+-- set up autocomplete 
+lsp.pyright.setup(coq.lsp_ensure_capabilities({}))
+lsp.tsserver.setup(coq.lsp_ensure_capabilities({}))
+lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({}))
+
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
