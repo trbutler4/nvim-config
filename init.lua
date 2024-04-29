@@ -4,7 +4,9 @@
 
 -- misc
 vim.cmd[[
- set termguicolors
+    set termguicolors
+    set number 
+    set relativenumber
 ]]
 
 -- Set tab width to 4 spaces
@@ -12,12 +14,6 @@ vim.cmd[[
     set tabstop=4
     set shiftwidth=4
     set expandtab
-]]
-
--- line numbers
-vim.cmd[[
-    set number 
-    set relativenumber
 ]]
 
 -- set leader to space (THIS ISNT WORKING???)
