@@ -36,7 +36,7 @@ vim.cmd[[
 
 
 ------------------------------------------------------------------------
--------------------- SETUP LAZY PLUGIN MANAGER -------------------------
+-------------------- LAZY PLUGIN MANAGER -------------------------------
 ------------------------------------------------------------------------
 -- bootsrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -65,6 +65,7 @@ local lsp = require('lspconfig')
 
 -- Setup language servers.
 lsp.tsserver.setup{}
+lsp.lua_ls.setup{}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -105,23 +106,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
+
+------------------------------------------------------------------------
+-------------------- AUTOCOMPLETE --------------------------------------
+------------------------------------------------------------------------
   -- Set up nvim-cmp.
   local cmp = require'cmp'
 
   cmp.setup({
     snippet = {
-      -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+        vim.fn["vsnip#anonymous"](args.body)
       end,
     },
     window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -132,10 +132,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
+      { name = 'vsnip' },
     }, {
       { name = 'buffer' },
     })
@@ -173,5 +170,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
   require('lspconfig').tsserver.setup {
+    capabilities = capabilities
+  }
+  require('lspconfig').lua_ls.setup {
     capabilities = capabilities
   }
