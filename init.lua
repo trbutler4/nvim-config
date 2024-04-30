@@ -17,7 +17,8 @@ vim.cmd[[
 ]]
 
 -- set leader to space (THIS ISNT WORKING???)
-vim.g.mapleader = "<Space>"
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 
 -- yank to system clipboard
@@ -62,6 +63,9 @@ local lsp = require('lspconfig')
 -- Setup language servers.
 lsp.tsserver.setup{}
 lsp.lua_ls.setup{}
+lsp.cairo_ls.setup{
+    cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -170,4 +174,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   }
   require('lspconfig').lua_ls.setup {
     capabilities = capabilities
+  }
+  require('lspconfig').cairo_ls.setup {
+    capabilities = capabilities,
+    cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
   }
