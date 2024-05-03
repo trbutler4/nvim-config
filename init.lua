@@ -66,6 +66,8 @@ lsp.lua_ls.setup{}
 lsp.cairo_ls.setup{
     cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
 }
+lsp.rust_analyzer.setup{}
+lsp.pyright.setup{}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -178,4 +180,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
   require('lspconfig').cairo_ls.setup {
     capabilities = capabilities,
     cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
+  }
+  require('lspconfig').rust_analyzer.setup {
+    capabilities = capabilities,
+  }
+  require('lspconfig').pyright.setup {
+    capabilities = capabilities,
   }
