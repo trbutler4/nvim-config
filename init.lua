@@ -12,7 +12,7 @@ require("lspconfig").lua_ls.setup({
 })
 require("lspconfig").cairo_ls.setup({
   capabilities = capabilities,
-  cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
+  cmd = { "scarb", "cairo-language-server", "--stdio" },
 })
 require("lspconfig").rust_analyzer.setup({
   capabilities = capabilities,
