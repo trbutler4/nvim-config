@@ -177,5 +177,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
   }
   require('lspconfig').cairo_ls.setup {
     capabilities = capabilities,
-    cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
+    cmd = { "scarb", "cairo-language-server", "--stdio" }
   }
