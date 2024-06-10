@@ -64,7 +64,7 @@ local lsp = require('lspconfig')
 lsp.tsserver.setup{}
 lsp.lua_ls.setup{}
 lsp.cairo_ls.setup{
-    cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" }
+    cmd = { "scarb", "cairo-language-server", "--stdio" }
 }
 
 -- Global mappings.
