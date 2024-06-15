@@ -26,6 +26,11 @@ vim.cmd[[
     set clipboard+=unnamedplus
 ]]
 
+-- for using fzf
+vim.cmd[[
+    set rtp+=/opt/homebrew/opt/fz
+]]
+
 -- mouse support 
 vim.cmd[[
     set mouse=a
@@ -68,6 +73,7 @@ lsp.cairo_ls.setup{
 }
 lsp.rust_analyzer.setup{}
 lsp.pyright.setup{}
+lsp.zls.setup{}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -185,5 +191,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     capabilities = capabilities,
   }
   require('lspconfig').pyright.setup {
+    capabilities = capabilities,
+  }
+  require('lspconfig').zls.setup {
     capabilities = capabilities,
   }
