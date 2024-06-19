@@ -42,18 +42,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- setup plugins 
 require("lazy").setup({
+    -- code support
     'neovim/nvim-lspconfig',
-    'kyazdani42/nvim-tree.lua',
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-    },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
@@ -61,11 +51,29 @@ require("lazy").setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-vsnip',
     'hrsh7th/vim-vsnip',
+
+    -- editor tools
+    'kyazdani42/nvim-tree.lua',
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+    },
+
+    -- colorschemes/visual stuff
+    "xiyaowong/transparent.nvim",
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
+
 })
 
 -- file tree setup
 require("nvim-tree").setup()
-vim.keymap.set('n', '<space>t', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
 
 -- telescope setup
 require("telescope").setup()
