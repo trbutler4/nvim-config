@@ -10,8 +10,8 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- disable netrw 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
@@ -53,7 +53,7 @@ require("lazy").setup({
     'hrsh7th/vim-vsnip',
 
     -- editor tools
-    'kyazdani42/nvim-tree.lua',
+    -- 'kyazdani42/nvim-tree.lua',
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         dependencies = { 'nvim-lua/plenary.nvim' },
@@ -76,8 +76,8 @@ require("lazy").setup({
 })
 
 -- file tree setup
-require("nvim-tree").setup()
-vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
+--require("nvim-tree").setup()
+--vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
 
 -- telescope setup
 require("telescope").setup()
