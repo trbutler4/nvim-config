@@ -77,7 +77,7 @@ require("lazy").setup({
 
 -- file tree setup
 require("nvim-tree").setup()
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
 
 -- telescope setup
 require("telescope").setup()
@@ -89,7 +89,9 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- toggleterm setup 
 require("toggleterm").setup()
-vim.keymap.set('n', '<C-t>', ':ToggleTerm direction=float<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>',  { noremap = true, silent = true })
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
