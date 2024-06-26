@@ -22,6 +22,9 @@ vim.g.mapleader = " "
 -- line numbers 
 vim.cmd[[set number]]
 
+-- yank to clipboard
+vim.cmd[[set clipboard+=unnamedplus]]
+
 
 
 -- ####################################################################################
@@ -262,3 +265,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+-- auto format
+vim.api.nvim_create_augroup("AutoFormat", {})
+
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.tsx",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("silent !prettier -w --quiet %")            
+            vim.cmd("edit")
+        end,
+    }
+)
