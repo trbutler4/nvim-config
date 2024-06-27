@@ -80,7 +80,7 @@ require("lazy").setup({
 
 -- file tree setup
 require("nvim-tree").setup()
-vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>',  { noremap = true, silent = true })
 
 -- telescope setup
 require("telescope").setup()
@@ -232,7 +232,7 @@ lspconfig.gopls.setup {
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
