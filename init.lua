@@ -90,7 +90,6 @@ vim.keymap.set('n', '<leader>fa', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>fg', builtin.help_tags, {})
 
 -- toggleterm setup 
 require("toggleterm").setup()
@@ -204,6 +203,12 @@ lspconfig.cairo_ls.setup {
     cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
     capabilities = capabilities
 }
+lspconfig.gopls.setup {
+    capabilities = capabilities
+}
+lspconfig.astro.setup {
+    capabilities = capabilities
+}
 lspconfig.rust_analyzer.setup {
     capabilities = capabilities,
     on_attach=on_attach,
@@ -225,9 +230,6 @@ lspconfig.rust_analyzer.setup {
             },
         }
     }
-}
-lspconfig.gopls.setup {
-    capabilities = capabilities
 }
 
 -- Global mappings.
