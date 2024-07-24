@@ -5,7 +5,7 @@
 -- Set tabs to always be 4 spaces
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
 -- disable netrw
@@ -206,7 +206,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
 lspconfig.efm.setup {
-    on_attach = require("lsp-format").on_attach,
+    on_attach = lsp_format.on_attach,
     init_options = { documentFormatting = true },
     settings = {
         languages = {
