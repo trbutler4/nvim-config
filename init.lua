@@ -77,7 +77,15 @@ require("lazy").setup({
     priority = 1000,
     version = false,
   },
+  {
+    'ibhagwan/fzf-lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  }
 })
+
+-- fzf setup
+require("fzf-lua").setup()
+
 -- file tree setup
 require("nvim-tree").setup()
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
