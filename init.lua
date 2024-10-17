@@ -21,9 +21,10 @@ vim.g.mapleader = " "
 vim.cmd [[
   set number
   set clipboard+=unnamedplus
-  setlocal spell spelllang=en_us
   set autoread
 ]]
+
+--vim.cmd[[setlocal spell spelllang=en_us]]
 
 -- ####################################################################################
 -- ################ PLUGINS ###########################################################
