@@ -14,6 +14,7 @@ vim.cmd([[
   set number
   set clipboard+=unnamedplus
   set autoread
+  set noswapfile
 ]])
 
 --
