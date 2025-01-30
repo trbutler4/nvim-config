@@ -112,11 +112,11 @@ return { -- LSP Configuration & Plugins
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			tsserver = {},
-			cairo_ls = {
-				cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
-			},
-			solidity = {},
+			-- tsserver = {},
+			-- cairo_ls = {
+			-- 	cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
+			-- },
+			-- solidity = {},
 			--
 
 			lua_ls = {
