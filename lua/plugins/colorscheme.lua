@@ -1,4 +1,6 @@
 return {
+  -- make this ho transparent
+  { "xiyaowong/transparent.nvim" },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
