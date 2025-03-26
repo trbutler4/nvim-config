@@ -3,6 +3,6 @@ return {
 	lazy = false,
 	opts = {},
 	keys = {
-		{ "<Leader>e", ":NvimTreeToggle<CR>", desc = "Toggle Explorer" },
+		{ "<Leader>ee", ":NvimTreeToggle<CR>", desc = "Toggle Explorer" },
 	},
 }
