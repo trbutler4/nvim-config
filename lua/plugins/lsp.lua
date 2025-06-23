@@ -118,6 +118,7 @@ return { -- LSP Configuration & Plugins
 			-- },
 			-- solidity = {},
 			--
+			gopls = {},
 
 			lua_ls = {
 				-- cmd = {...},
