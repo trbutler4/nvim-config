@@ -36,7 +36,8 @@ return { -- LSP Configuration & Plugins
 
 				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-				map("K", vim.lsp.buf.hover, "Hover Documentation")
+				map("<leader>k", vim.lsp.buf.hover, "Hover Documentation")
+				map("<leader>K", vim.diagnostic.open_float, "Hover Diagnostics")
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 				-- The following two autocommands are used to highlight references of the
@@ -77,11 +78,12 @@ return { -- LSP Configuration & Plugins
 			clangd = {},
 			ruff = {},
 			rust_analyzer = {},
-			cairo_ls = {
-				cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
-			},
+			-- cairo_ls = {
+			-- 	cmd = { "scarb", "cairo-language-server", "/C", "--node-ipc" },
+			-- },
 			solidity = {},
 			gopls = {},
+			ts_ls = {},
 
 			lua_ls = {
 				-- cmd = {...},
