@@ -1,5 +1,3 @@
--- DISABLED: Using oil.nvim instead
---[[
 return {
 	"mikavilpas/yazi.nvim",
 	event = "VeryLazy",
@@ -35,6 +33,3 @@ return {
 		vim.g.loaded_netrw = 1
 	end,
 }
---]]
-
-return {}
