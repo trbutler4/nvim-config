@@ -9,20 +9,10 @@ return {
 	},
 	keys = {
 		{
-			"<leader>-",
+			"<leader>e",
 			mode = { "n", "v" },
 			"<cmd>Neotree toggle<cr>",
 			desc = "Toggle Neo-tree",
-		},
-		{
-			"<leader>cw",
-			"<cmd>Neotree toggle cwd<cr>",
-			desc = "Toggle Neo-tree at working directory",
-		},
-		{
-			"<c-up>",
-			"<cmd>Neotree reveal<cr>",
-			desc = "Reveal current file in Neo-tree",
 		},
 	},
 	opts = {
